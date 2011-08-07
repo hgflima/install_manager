@@ -2,7 +2,7 @@ class InstallationsController < ApplicationController
   # GET /installations
   # GET /installations.xml
   def index
-    @installations = Installation.all
+    @installations = Installation.order('production_installation_date DESC').limit(30)
 
     respond_to do |format|
       format.html # index.html.erb

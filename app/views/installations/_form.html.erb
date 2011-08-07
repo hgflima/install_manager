@@ -1,0 +1,50 @@
+<%= form_for(@installation) do |f| %>
+  <% if @installation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@installation.errors.count, "error") %> não deixou que este ticket fosse aberto.</h2>
+
+      <ul>
+      <% @installation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :"Código do projeto" %><br />
+    <%= f.text_field :project_code %>
+  </div>
+  <div class="field">
+    <%= f.label :Projeto %><br />
+    <%= f.text_field :project %>
+  </div>
+  <div class="field">
+    <%= f.label :Descrição %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.check_box :installed_on_approval %>
+    <%= f.label :"Foi instalado em homologação?" %>
+  </div>
+  <div class="field">
+    <%= f.check_box :server_to_install_web %>
+    <%= f.label :"Instalar o projeto Web?" %>
+  </div>
+  <div class="field">
+    <%= f.check_box :server_to_install_messaging %>
+    <%= f.label :"Instalar o projeto Messaging?" %>
+  </div>
+  <div class="field">
+    <%= f.check_box :server_to_install_batch %>
+    <%= f.label :"Instalar o projeto Batch?" %>
+  </div>
+  <div class="field">
+    <%= f.label :"Data de instalação em produção" %><br />
+    <%= f.date_select :production_installation_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit :"Salvar ticket" %>
+  </div>
+<% end %>

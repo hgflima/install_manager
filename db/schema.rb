@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110807024738) do
+ActiveRecord::Schema.define(:version => 20110807075802) do
 
   create_table "installations", :force => true do |t|
     t.string   "project"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20110807024738) do
     t.date     "production_installation_date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "had_to_rollback"
   end
 
 end

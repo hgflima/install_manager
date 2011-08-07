@@ -2,14 +2,11 @@
 
 <table class="stats">
   <tr>
-    <th>Projeto</th>
     <th>Código do projeto</th>
-    <th>Descrição</th>
+    <th>Projeto</th>
     <th>Instalado em homologação</th>
-    <th>Instalar batch</th>
-    <th>Instalar web</th>
-    <th>Instalar messaging</th>
     <th>Data de instalação em produção</th>
+    <th>Foi necessário voltar para versão anterior</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,14 +14,11 @@
 
 <% @installations.each do |installation| %>
   <tr>
-    <td><%= installation.project %></td>
     <td><%= installation.project_code %></td>
-    <td><%= installation.description %></td>
+    <td><%= installation.project %></td>
     <td><%= installation.installed_on_approval %></td>
-    <td><%= installation.server_to_install_batch %></td>
-    <td><%= installation.server_to_install_web %></td>
-    <td><%= installation.server_to_install_messaging %></td>
     <td><%= installation.production_installation_date %></td>
+	<td><%= installation.had_to_rollback %></td>
     <td><%= link_to image_tag("show.png", :border => 0), installation %></td>
     <td><%= link_to image_tag("edit.png", :border => 0), edit_installation_path(installation) %></td>
     <td><%= link_to image_tag("delete.png", :border => 0), installation, :confirm => 'Você tem certeza que deseja deletar este ticket?', :method => :delete %></td>

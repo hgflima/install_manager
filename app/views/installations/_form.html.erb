@@ -44,6 +44,10 @@
     <%= f.label :"Data de instalação em produção" %><br />
     <%= f.date_select :production_installation_date %>
   </div>
+  <div class="field">
+    <%= f.check_box :had_to_rollback %>
+    <%= f.label :"Foi necessário voltar a instalação?" %>
+  </div>
   <div class="actions">
     <%= f.submit :"Salvar ticket" %>
   </div>

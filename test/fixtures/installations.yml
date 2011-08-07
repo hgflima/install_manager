@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  project: MyString
+  project_code: MyString
+  description: MyString
+  installed_on_approval: false
+  server_to_install_batch: false
+  server_to_install_web: false
+  server_to_install_messaging: false
+  production_installation_date: 2011-08-06
+
+two:
+  project: MyString
+  project_code: MyString
+  description: MyString
+  installed_on_approval: false
+  server_to_install_batch: false
+  server_to_install_web: false
+  server_to_install_messaging: false
+  production_installation_date: 2011-08-06

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h1>Informações de instalação do projeto: <%= @installation.project %></h1>
+</p>
+
+<p>
+  <b>Código do projeto:</b>
+  <%= @installation.project_code %>
+</p>
+
+<p>
+  <b>Descrição:</b>
+  <%= @installation.description %>
+</p>
+
+<p>
+  <b>Foi instalado em homologação?</b>
+  <%= @installation.installed_on_approval %>
+</p>
+
+<p>
+  <b>Instalar o projeto web?</b>
+  <%= @installation.server_to_install_web %>
+</p>
+
+<p>
+  <b>Instalar o projeto messaging?</b>
+  <%= @installation.server_to_install_messaging %>
+</p>
+
+<p>
+  <b>Instalar o projeto batch?</b>
+  <%= @installation.server_to_install_batch %>
+</p>
+
+<p>
+  <b>Production installation date:</b>
+  <%= @installation.production_installation_date %>
+</p>
+
+
+<%= link_to 'Editar', edit_installation_path(@installation) %> |
+<%= link_to 'Voltar', installations_path %>

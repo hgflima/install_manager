@@ -1,4 +1,6 @@
 InstallManager::Application.routes.draw do
+  resources :installations
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
